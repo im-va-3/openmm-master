@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../consolidation/schemas/project-meta.schema.json",
+  "commands": {
+    "build": null,
+    "reason": "The portfolio layer does not guess commands for heterogeneous upstream projects.",
+    "smoke": null,
+    "status": "command-not-configured",
+    "test": null
+  },
+  "language": [
+    "C",
+    "C++",
+    "C/C++",
+    "CUDA",
+    "Fortran",
+    "Python"
+  ],
+  "license": null,
+  "name": "openmm-master",
+  "notes": [
+    "The source checkout remains the provenance and update source for this snapshot.",
+    "Consolidation improvements are represented by the flat category layout, provenance metadata, and shared validation contracts.",
+    "License names and terms must be verified from the copied project files; this exporter does not infer a license."
+  ],
+  "origin_url": null,
+  "schema_version": "1.0",
+  "snapshot": {
+    "category": "07-molecular-materials-and-condensed-matter",
+    "copied_bytes": 78076549,
+    "copied_files": 2166,
+    "date": "2026-08-25",
+    "excluded_directories": [
+      "wrappers/python/openmm/app/data"
+    ],
+    "excluded_files": [],
+    "folder": "openmm-master",
+    "kind": "independent-code-snapshot",
+    "skipped_symlinks": [],
+    "source_checkout_preserved": true,
+    "source_level_changes": false,
+    "topic": "classical-molecular-dynamics"
+  },
+  "source_path": "07-molecular-materials-and-condensed-matter/classical-molecular-dynamics/openmm-master",
+  "status": "unknown"
+}
