@@ -26,12 +26,10 @@
   "schema_version": "1.0",
   "snapshot": {
     "category": "07-molecular-materials-and-condensed-matter",
-    "copied_bytes": 78076549,
-    "copied_files": 2166,
+    "copied_bytes": 141468815,
+    "copied_files": 2263,
     "date": "2026-08-25",
-    "excluded_directories": [
-      "wrappers/python/openmm/app/data"
-    ],
+    "excluded_directories": [],
     "excluded_files": [],
     "folder": "openmm-master",
     "kind": "independent-code-snapshot",
