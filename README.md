@@ -34,3 +34,21 @@ different parts of OpenMM, but most of the source code is covered by the MIT
 license or the GNU Lesser General Public License (LGPL).  Portions copyright
 © 2008-2025 Stanford University and the Authors.  For more details, see
 [Licenses.txt](docs-source/licenses/Licenses.txt).
+
+
+## Step-by-step user guide
+
+1. **Install OpenMM.** In a fresh Python environment, use <code>python -m pip install openmm</code> or the conda-forge package. Check the installation with <code>python -m openmm.testInstallation</code> and read the platform notes if you expect GPU execution.
+2. **Choose an input system.** Start with a PDB file and a compatible force field. Place a file named <code>input.pdb</code> in the current directory, then run <code>python examples/python-examples/simulatePdb.py</code>. The script minimizes the structure, runs 10,000 steps, and writes a DCD trajectory; the [examples guide](examples/README.md) also covers Amber, CHARMM, and GROMACS inputs.
+3. **Build the molecular system.** Load the topology/coordinates, choose force-field XML files, create the System, select constraints and nonbonded treatment, and confirm the system can be serialized.
+4. **Choose dynamics and hardware.** Create an integrator with temperature, friction, and time step as appropriate; create a Simulation; select a CPU/CUDA/OpenCL/Reference platform and any platform properties.
+5. **Run and save.** Set positions and velocities, minimize if needed, add reporters for state/energy/trajectory, then advance the requested number of steps. Save checkpoints and final structures for restart and analysis.
+6. **Customize physics.** Add custom forces or integrators, parameterize the system, and compare against a built-in force field before optimizing or extending the model.
+
+### Functionality map
+
+- Standalone molecular-dynamics application APIs and Python/C++ library interfaces.
+- Force-field construction, custom forces, integrators, constraints, barostats, virtual sites, parameter updates, and platform selection.
+- CPU/GPU execution, platform properties, checkpointing, reporters, trajectories, system serialization, Python/C++ APIs, C/Fortran bindings, and benchmark/utility scripts.
+- Follow the [User Guide](https://docs.openmm.org/latest/userguide/), [Python API](https://docs.openmm.org/latest/api-python/), [C++ API](https://docs.openmm.org/latest/api-c++/), and local [examples](examples/) for every force, integrator, and platform option.
+
